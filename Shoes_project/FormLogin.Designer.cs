@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             pnMain = new Panel();
+            btnGuest = new Button();
             btnLogin = new Button();
             txtPassword = new TextBox();
             txtLogin = new TextBox();
             lbPassword = new Label();
             lbLogin = new Label();
             pbLogo = new PictureBox();
-            btnGuest = new Button();
             pnMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbLogo).BeginInit();
             SuspendLayout();
@@ -55,6 +55,19 @@
             pnMain.Size = new Size(300, 221);
             pnMain.TabIndex = 1;
             // 
+            // btnGuest
+            // 
+            btnGuest.BackColor = Color.Chartreuse;
+            btnGuest.FlatAppearance.BorderSize = 0;
+            btnGuest.FlatStyle = FlatStyle.Flat;
+            btnGuest.Location = new Point(80, 175);
+            btnGuest.Name = "btnGuest";
+            btnGuest.Size = new Size(150, 30);
+            btnGuest.TabIndex = 5;
+            btnGuest.Text = "Войти как гость";
+            btnGuest.UseVisualStyleBackColor = false;
+            btnGuest.Click += BtnGuest_Click;
+            // 
             // btnLogin
             // 
             btnLogin.BackColor = Color.MediumSpringGreen;
@@ -66,6 +79,7 @@
             btnLogin.TabIndex = 4;
             btnLogin.Text = "Войти";
             btnLogin.UseVisualStyleBackColor = false;
+            btnLogin.Click += BtnLogin_Click;
             // 
             // txtPassword
             // 
@@ -110,18 +124,6 @@
             pbLogo.SizeMode = PictureBoxSizeMode.Zoom;
             pbLogo.TabIndex = 2;
             pbLogo.TabStop = false;
-            // 
-            // btnGuest
-            // 
-            btnGuest.BackColor = Color.Chartreuse;
-            btnGuest.FlatAppearance.BorderSize = 0;
-            btnGuest.FlatStyle = FlatStyle.Flat;
-            btnGuest.Location = new Point(80, 175);
-            btnGuest.Name = "btnGuest";
-            btnGuest.Size = new Size(150, 30);
-            btnGuest.TabIndex = 5;
-            btnGuest.Text = "Войти как гость";
-            btnGuest.UseVisualStyleBackColor = false;
             // 
             // FormLogin
             // 
