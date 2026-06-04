@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace Shoes_project.Models;
 
@@ -149,7 +147,7 @@ public partial class ShopDpContext : DbContext
                 .HasForeignKey(d => d.IdSupplier)
                 .HasConstraintName("products_id_supplier_fkey");
 
-            entity.HasOne(d => d.IdTypeNavigation).WithMany(p => p.Products)
+            entity.HasOne(d => d.ProductType).WithMany(p => p.Products)
                 .HasForeignKey(d => d.IdType)
                 .HasConstraintName("products_id_type_fkey");
         });

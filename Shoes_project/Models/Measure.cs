@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace Shoes_project.Models;
+﻿namespace Shoes_project.Models;
 
 public partial class Measure
 {
