@@ -129,6 +129,7 @@
             // 
             AutoScaleDimensions = new SizeF(9F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(384, 361);
             Controls.Add(pbLogo);
             Controls.Add(pnMain);
