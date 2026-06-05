@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Shoes_project.Models;
 using Shoes_project.Properties;
+using System.Resources;
+using System.Xml.Linq;
 
 namespace Shoes_project
 {
@@ -134,11 +136,18 @@ namespace Shoes_project
                  $"Количество на складе: {product.CointInStock}" + Environment.NewLine;
         }
 
-        private Image LoadProductImage(string photoUrl)
+        private Image? LoadProductImage(string photoUrl)
         {
-            if (!String.IsNullOrEmpty(photoUrl) && System.IO.File.Exists(photoUrl))
+            if (!string.IsNullOrEmpty(photoUrl) && System.IO.File.Exists(photoUrl))
             {
                 return Image.FromFile(photoUrl);
+            }
+
+            Bitmap bmp = new Bitmap(150, 100);
+            using (Graphics g = Graphics.FromImage(bmp))
+            {
+                g.Clear(Color.White);
+                g.DrawRectangle(Pens.LightGray, 0, 0, 149, 99);
             }
 
             return Resources.picture;
