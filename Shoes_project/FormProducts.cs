@@ -1,18 +1,17 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Shoes_project.Models;
 using Shoes_project.Properties;
-using System.Resources;
-using System.Xml.Linq;
 
 namespace Shoes_project
 {
     public partial class FormProducts : Form
     {
+        private FormMainMenu menu;
 
         public User CurrentUser { get; private set; }
         public bool IsGuest { get; private set; }
 
-        public FormProducts(User user, bool guest)
+        public FormProducts(User user, bool guest, FormMainMenu mainMenu)
         {
             InitializeComponent();
 
@@ -40,6 +39,8 @@ namespace Shoes_project
             IsGuest = guest;
 
             lblUserName.Text = IsGuest ? "Гость" : CurrentUser.FullName;
+
+            this.menu = mainMenu;
 
             LoadProducts();
         }
@@ -153,15 +154,23 @@ namespace Shoes_project
             return Resources.picture;
         }
 
-        private void BtnLogout_Click(object sender, EventArgs e)
+        private void BtnBackToMenu_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.Cancel;
             this.Close();
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             base.OnFormClosing(e);
+
+            if (menu != null)
+            {
+                menu.Show();
+            }
+            else
+            {
+                this.DialogResult = DialogResult.Cancel;
+            }
         }
     }
 }

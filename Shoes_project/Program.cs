@@ -13,11 +13,11 @@ namespace Shoes_project
                 {
                     if (formLogin.ShowDialog() == DialogResult.OK)
                     {
-                        using (var formProducts = new FormProducts(
+                        using (var formMainMenu = new FormMainMenu(
                             formLogin.CurrentUser,
                             formLogin.IsGuest))
                         {
-                            if (formProducts.ShowDialog() == DialogResult.Cancel)
+                            if (formMainMenu.ShowDialog() == DialogResult.Cancel)
                             {
                                 continue;
                             }

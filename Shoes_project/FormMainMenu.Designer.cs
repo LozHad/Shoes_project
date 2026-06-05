@@ -1,6 +1,6 @@
 ﻿namespace Shoes_project
 {
-    partial class FormProducts
+    partial class FormMainMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -29,50 +29,52 @@
         private void InitializeComponent()
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProducts));
-            panelTop = new Panel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMainMenu));
             lblUserName = new Label();
-            btnBackToMenu = new Button();
+            btnBackToLogin = new Button();
+            panelTop = new Panel();
             dgvProducts = new DataGridView();
+            btnProducts = new Button();
+            btnOrders = new Button();
             panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvProducts).BeginInit();
             SuspendLayout();
-            // 
-            // panelTop
-            // 
-            panelTop.Controls.Add(lblUserName);
-            panelTop.Controls.Add(btnBackToMenu);
-            panelTop.Dock = DockStyle.Top;
-            panelTop.Location = new Point(10, 10);
-            panelTop.Name = "panelTop";
-            panelTop.Padding = new Padding(0, 0, 0, 10);
-            panelTop.Size = new Size(964, 40);
-            panelTop.TabIndex = 0;
             // 
             // lblUserName
             // 
             lblUserName.AutoSize = true;
             lblUserName.Dock = DockStyle.Right;
-            lblUserName.Location = new Point(769, 0);
+            lblUserName.Location = new Point(176, 0);
             lblUserName.Name = "lblUserName";
-            lblUserName.Size = new Size(45, 19);
+            lblUserName.Size = new Size(38, 15);
             lblUserName.TabIndex = 6;
             lblUserName.Text = "label1";
             lblUserName.TextAlign = ContentAlignment.MiddleRight;
             // 
-            // btnBackToMenu
+            // btnBackToLogin
             // 
-            btnBackToMenu.BackColor = Color.MediumSpringGreen;
-            btnBackToMenu.Dock = DockStyle.Right;
-            btnBackToMenu.FlatAppearance.BorderSize = 0;
-            btnBackToMenu.FlatStyle = FlatStyle.Flat;
-            btnBackToMenu.Location = new Point(814, 0);
-            btnBackToMenu.Name = "btnBackToMenu";
-            btnBackToMenu.Size = new Size(150, 30);
-            btnBackToMenu.TabIndex = 5;
-            btnBackToMenu.Text = "Назад";
-            btnBackToMenu.UseVisualStyleBackColor = false;
-            btnBackToMenu.Click += BtnBackToMenu_Click;
+            btnBackToLogin.BackColor = Color.MediumSpringGreen;
+            btnBackToLogin.Dock = DockStyle.Right;
+            btnBackToLogin.FlatAppearance.BorderSize = 0;
+            btnBackToLogin.FlatStyle = FlatStyle.Flat;
+            btnBackToLogin.Location = new Point(214, 0);
+            btnBackToLogin.Name = "btnBackToLogin";
+            btnBackToLogin.Size = new Size(150, 30);
+            btnBackToLogin.TabIndex = 5;
+            btnBackToLogin.Text = "Выйти";
+            btnBackToLogin.UseVisualStyleBackColor = false;
+            btnBackToLogin.Click += BtnBackToLogin_Click_1;
+            // 
+            // panelTop
+            // 
+            panelTop.Controls.Add(lblUserName);
+            panelTop.Controls.Add(btnBackToLogin);
+            panelTop.Dock = DockStyle.Top;
+            panelTop.Location = new Point(10, 10);
+            panelTop.Name = "panelTop";
+            panelTop.Padding = new Padding(0, 0, 0, 10);
+            panelTop.Size = new Size(364, 40);
+            panelTop.TabIndex = 1;
             // 
             // dgvProducts
             // 
@@ -99,24 +101,50 @@
             dgvProducts.ReadOnly = true;
             dgvProducts.RowHeadersVisible = false;
             dgvProducts.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvProducts.Size = new Size(964, 601);
-            dgvProducts.TabIndex = 1;
+            dgvProducts.Size = new Size(364, 501);
+            dgvProducts.TabIndex = 2;
             // 
-            // FormProducts
+            // btnProducts
             // 
-            AutoScaleDimensions = new SizeF(9F, 19F);
+            btnProducts.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            btnProducts.BackColor = Color.MediumSpringGreen;
+            btnProducts.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            btnProducts.Location = new Point(117, 227);
+            btnProducts.Name = "btnProducts";
+            btnProducts.Size = new Size(150, 50);
+            btnProducts.TabIndex = 3;
+            btnProducts.Text = "Товары";
+            btnProducts.UseVisualStyleBackColor = false;
+            btnProducts.Click += BtnProducts_Click;
+            // 
+            // btnOrders
+            // 
+            btnOrders.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            btnOrders.BackColor = Color.MediumAquamarine;
+            btnOrders.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            btnOrders.Location = new Point(117, 283);
+            btnOrders.Name = "btnOrders";
+            btnOrders.Size = new Size(150, 50);
+            btnOrders.TabIndex = 4;
+            btnOrders.Text = "Заказы";
+            btnOrders.UseVisualStyleBackColor = false;
+            btnOrders.Click += BtnOrders_Click;
+            // 
+            // FormMainMenu
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(984, 661);
+            ClientSize = new Size(384, 561);
+            Controls.Add(btnOrders);
+            Controls.Add(btnProducts);
             Controls.Add(dgvProducts);
             Controls.Add(panelTop);
-            Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(4);
-            Name = "FormProducts";
+            Name = "FormMainMenu";
             Padding = new Padding(10);
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Список товаров";
+            Text = "Меню";
             panelTop.ResumeLayout(false);
             panelTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvProducts).EndInit();
@@ -125,9 +153,11 @@
 
         #endregion
 
+        private Label lblUserName;
+        private Button btnBackToLogin;
         private Panel panelTop;
         private DataGridView dgvProducts;
-        private Label lblUserName;
-        private Button btnBackToMenu;
+        private Button btnProducts;
+        private Button btnOrders;
     }
 }
