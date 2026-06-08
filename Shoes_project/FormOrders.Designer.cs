@@ -103,6 +103,7 @@
             btnBackToMenu.TabIndex = 5;
             btnBackToMenu.Text = "Назад";
             btnBackToMenu.UseVisualStyleBackColor = false;
+            btnBackToMenu.Click += BtnBackToMenu_Click_1;
             // 
             // FormOrders
             // 

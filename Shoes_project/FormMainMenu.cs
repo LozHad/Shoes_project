@@ -11,10 +11,13 @@ namespace Shoes_project
         {
             InitializeComponent();
 
+            
+
             CurrentUser = user;
             IsGuest = guest;
 
             lblUserName.Text = IsGuest ? "Гость" : CurrentUser.FullName;
+            
         }
 
         private void BtnProducts_Click(object sender, EventArgs e)
@@ -25,6 +28,7 @@ namespace Shoes_project
 
         private void BtnOrders_Click(object sender, EventArgs e)
         {
+
             if (IsGuest == true)
             {
                 MessageBox.Show("Для просмотра заказов необходимо авторизоваться!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);

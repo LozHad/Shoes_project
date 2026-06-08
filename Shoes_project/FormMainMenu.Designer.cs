@@ -44,7 +44,7 @@
             // 
             lblUserName.AutoSize = true;
             lblUserName.Dock = DockStyle.Right;
-            lblUserName.Location = new Point(170, 0);
+            lblUserName.Location = new Point(213, 0);
             lblUserName.Margin = new Padding(4, 0, 4, 0);
             lblUserName.Name = "lblUserName";
             lblUserName.Size = new Size(45, 19);
@@ -58,10 +58,10 @@
             btnBackToLogin.Dock = DockStyle.Right;
             btnBackToLogin.FlatAppearance.BorderSize = 0;
             btnBackToLogin.FlatStyle = FlatStyle.Flat;
-            btnBackToLogin.Location = new Point(215, 0);
+            btnBackToLogin.Location = new Point(258, 0);
             btnBackToLogin.Margin = new Padding(4);
             btnBackToLogin.Name = "btnBackToLogin";
-            btnBackToLogin.Size = new Size(193, 38);
+            btnBackToLogin.Size = new Size(150, 38);
             btnBackToLogin.TabIndex = 5;
             btnBackToLogin.Text = "Выйти";
             btnBackToLogin.UseVisualStyleBackColor = false;
