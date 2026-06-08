@@ -29,11 +29,11 @@ namespace Shoes_project
             {
                 MessageBox.Show("Для просмотра заказов необходимо авторизоваться!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
-            //FormOrders formOrders = new FormOrders(CurrentUser);
-            //formOrders.Show();
-
-            //this.Close();
+            else
+            {
+                FormOrders formOrders = new FormOrders(CurrentUser, this);
+                formOrders.Show();
+            }
         }
 
         private void BtnBackToLogin_Click_1(object sender, EventArgs e)
